@@ -1,0 +1,53 @@
+set clipboard=unnamedplus
+imap <A-h> <Esc><C-w>h
+imap <A-j> <Esc><C-w>j
+imap <A-k> <Esc><C-w>k
+imap <A-l> <Esc><C-w>l
+imap <C-s> <Esc> :w<CR><Esc>
+imap <c-s> <Esc> :w<CR><Esc>
+imap jj <Esc>
+inoremap <F1> <ESC>
+map ; :
+map <A-p> gT
+map <A-n> gt
+map <leader>r :action RenameElement<CR>
+noremap <leader>h <C-w>h
+noremap <leader>j <C-w>j
+noremap <leader>k <C-w>k
+noremap <leader>l <C-w>l
+nmap <C-j> :cn<CR>zz
+nmap <C-k> :cp<CR>zz
+nmap <C-s> :w<CR>
+nmap <CR> o<Esc>
+nmap <S-CR> O<Esc>
+nmap <c-s> :w<CR>
+nmap , \
+nnoremap <F1> <ESC>
+nnoremap <leader>s :split<CR>
+nnoremap <leader>x :action Unsplit<CR>
+nnoremap <leader>g :action Generate<CR>
+nnoremap <leader>vae ggVG
+nnoremap <leader>vs :vsplit<CR>
+nnoremap H ^
+nnoremap L $
+nnoremap N Nzz
+nnoremap S i<CR><Esc>
+nnoremap j gj
+nnoremap k gk
+nnoremap n nzz
+nnoremap <leader>b :action GotoDeclaration<CR>
+nnoremap <leader>u :action GotoSuperMethod<CR>
+noremap K <nop>
+set nolist
+set ignorecase
+set scrolloff=4
+set showbreak=┅
+set showcmd
+set smartcase
+set smartindent
+set smarttab
+set spell
+set number
+set timeout timeoutlen=300
+set virtualedit=all
+set expandtab
