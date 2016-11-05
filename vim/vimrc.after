@@ -10,18 +10,15 @@ set clipboard=unnamedplus
 color memoizr1
 hi EasyMotionTarget ctermfg=yellow
 hi EasyMotionTarget2Second ctermfg=green
-imap @sh <Esc><c-w>h
-imap @sj <Esc><c-w>j
-imap @sk <Esc><c-w>k
-imap @sl <Esc><c-w>l
+map <leader>h <Esc><c-w>h
+map <leader>j <Esc><c-w>j
+map <leader>k <Esc><c-w>k
+map <leader>l <Esc><c-w>l
+map <leader>x <Esc>:q<cr>
 imap s <Esc> :w<CR><Esc>
 imap <c-s> <Esc> :w<CR><Esc>
 imap jj <Esc>
 inoremap <F1> <ESC>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
 let g:EasyMotion_keys = 'fjdkslghaqowiezytbcnvxmr'
 let g:airline_left_sep = ''
 let g:airline_powerline_fonts=1
@@ -32,8 +29,6 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['ruby'] = 'ruby,ruby-*'
 let g:surround_45 = "<% \r %>"
 let g:surround_61 = "<%= \r %>"
-map @sm :set number<CR>
-"map @sn :set relativenumber<CR>
 map ; :
 map <silent> <leader>1 :tabn 1<cr>
 map <silent> <leader>2 :tabn 2<cr>
@@ -44,10 +39,6 @@ map <silent> <leader>6 :tabn 6<cr>
 map <silent> <leader>7 :tabn 7<cr>
 map <silent> <leader>8 :tabn 8<cr>
 map <silent> <leader>9 :tabn 9<cr>
-nmap @sh <c-w>h
-nmap @sj <c-w>j
-nmap @sk <c-w>k
-nmap @sl <c-w>l
 nmap j :cn<CR>zz
 nmap k :cp<CR>zz
 nmap s :w<CR>
@@ -55,20 +46,15 @@ nmap <CR> o<Esc>
 nmap <leader><leader>a <Plug>(easymotion-jumptoanywhere)
 nmap <S-CR> O<Esc>
 nmap <c-s> :w<CR>
-nnoremap @sH 5<c-w><
-nnoremap @sJ 5<c-w>-
-nnoremap @sK 5<c-w>+
-nnoremap @sL 5<c-w>>
-nnoremap @sd <c-e>
-nnoremap @sf <c-y>
-nnoremap @sr :!rspec %<CR>
+nnoremap <c-left> 5<c-w><
+nnoremap <c-down> 5<c-w>-
+nnoremap <c-up> 5<c-w>+
+nnoremap <c-right> 5<c-w>>
 nnoremap n :tabn<CR>
 nnoremap p :tabp<CR>
 nnoremap <F1> <ESC>
 nnoremap <down> <nop>
 nnoremap <leader>hs :split<CR>
-nnoremap <leader>j G
-nnoremap <leader>k gg
 nnoremap <leader>vae ggVG
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <left> <nop>
@@ -88,7 +74,6 @@ set cursorline
 set fillchars=
 set lazyredraw
 set nolist
-"set relativenumber
 set scrolloff=4
 set showbreak=┅
 set undolevels=999999
@@ -104,7 +89,6 @@ set virtualedit=all
 set wildmenu
 vnoremap <F1> <ESC>
 set noswapfile
-"let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|doc'
 nmap <leader>m :NERDTreeFind<CR>
 
 set tabstop=2
