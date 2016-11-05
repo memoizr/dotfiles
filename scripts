@@ -1,0 +1,20 @@
+#!/bin/bash
+
+dir=~/dotfiles
+oldDir=~/dotfiles_old
+
+echo "Creating $oldDir for backup off any existing dotfiles in ~"
+mkdir -p $oldDir
+echo "...done"
+
+echo "Changing to the $dir directory"
+cd $dir
+echo "...done"
+
+for file in $files; do
+  echo "Moving eny existing dotfiles in homedir to dotfiles_old_directory, then create symlinks"
+  vm ~/.$file ~/dotfiles_old/
+  echo "Creating symlink to $file in home directory."
+  ln -s $dir/$file ~/.$file
+done
+
